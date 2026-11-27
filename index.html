@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Стоп-кадр — фотоигра для свадеб, юбилеев, корпоративов и выпускных. Гости угадывают события по фрагментам своих фотографий, ведущий управляет раундом с телефона.">
+  <meta name="theme-color" content="#111412">
+  <meta property="og:title" content="Стоп-кадр — фотоигра для ведущих">
+  <meta property="og:description" content="Сыграйте в историю вашего праздника. Свои фотографии, экран для гостей и пульт ведущего на телефоне.">
+  <title>Стоп-кадр — фотоигра для ведущих</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#content">Перейти к содержанию</a>
+  <header class="top">
+    <div class="wrap top__inner">
+      <a class="brand" href="#top" aria-label="Стоп-кадр — начало страницы"><span class="brand__mark" aria-hidden="true"></span>Стоп-кадр</a>
+      <nav aria-label="Навигация">
+        <a href="#game">Как играть</a>
+        <a href="#events">Для мероприятий</a>
+        <a href="#guide">Инструкция</a>
+      </nav>
+      <a class="button button--outline header-download" href="#download">Скачать</a>
+    </div>
+  </header>
+
+  <main id="content">
+    <section id="top" class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero__text">
+        <p class="eyebrow">Фотоигра для ведущих</p>
+        <h1 id="hero-title">Что осталось<br>за <em>кадром?</em></h1>
+        <p class="hero__lead">Покажите фрагмент знакомой фотографии и предложите гостям угадать, кто на ней, где это было и в каком году.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#download">Скачать демо</a>
+          <a class="button button--outline" href="#game">Посмотреть игру</a>
+        </div>
+        <p class="platforms">Windows <span></span> macOS</p>
+      </div>
+      <figure class="hero__figure">
+        <div class="hero__image">
+          <img src="./assets/demo-hike.jpg" alt="Лагерь среди гор на фотографии из демо-игры" fetchpriority="high">
+          <div class="focus" aria-hidden="true"></div>
+        </div>
+        <figcaption><span>Фото из демо-набора</span><span>Кто, где и когда?</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="light" id="game" aria-labelledby="game-title">
+      <div class="wrap section">
+        <div class="section-head">
+          <div><p class="eyebrow">Механика игры</p><h2 id="game-title">Весь зал играет</h2></div>
+          <p>Подготовьте фотографии и выберите тему для экрана гостей. Во время игры раскрывайте кадры постепенно, а после итогов запустите слайд-шоу с музыкой.</p>
+        </div>
+        <div class="showcase" id="screens">
+          <figure class="showcase__feature">
+            <button class="showcase__image" type="button" aria-label="Увеличить скриншот"
+                    aria-haspopup="dialog" aria-controls="photo-viewer" data-enlarge>
+              <img src="./assets/game-editor.png" alt="Редактор со списком фотографий, рамками фрагментов и полями ответов"
+                   width="1919" height="1008" loading="lazy" data-feature-image>
+            </button>
+            <figcaption aria-live="polite">
+              <span><strong data-feature-title>Редактор ведущего</strong><br>
+                <span data-feature-caption>Ведущий заранее загружает фотографии, выбирает фрагменты и вписывает ответы.</span></span>
+              <button class="button showcase__zoom" type="button" aria-haspopup="dialog"
+                      aria-controls="photo-viewer" data-enlarge>Увеличить</button>
+            </figcaption>
+          </figure>
+          <div class="showcase__choices" role="group" aria-label="Выбрать скриншот">
+            <button type="button" data-shot="0" aria-pressed="true"><img src="./assets/game-editor.png" alt="" loading="lazy"><span>Редактор ведущего</span></button>
+            <button type="button" data-shot="1" aria-pressed="false"><img src="./assets/game-themes.png" alt="" loading="lazy"><span>Темы оформления</span></button>
+            <button type="button" data-shot="2" aria-pressed="false"><img src="./assets/wedding-first.png" alt="" loading="lazy"><span>Первый фрагмент</span></button>
+            <button type="button" data-shot="3" aria-pressed="false"><img src="./assets/wedding-reveal.png" alt="" loading="lazy"><span>Раскрытие кадра</span></button>
+            <button type="button" data-shot="4" aria-pressed="false"><img src="./assets/kayak-host.jpg" alt="" loading="lazy"><span>Пульт ведущего</span></button>
+            <button type="button" data-shot="5" aria-pressed="false"><img src="./assets/game-results.png" alt="" loading="lazy"><span>Итоги игры</span></button>
+            <button type="button" data-shot="6" aria-pressed="false"><img src="./assets/game-slideshow.png" alt="" loading="lazy"><span>Слайд-шоу с музыкой</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="wrap section" aria-labelledby="events-title">
+      <div class="section-head">
+        <div><p class="eyebrow">Свои фотографии</p><h2 id="events-title">Истории вашего праздника</h2></div>
+        <p>Подберите снимки, которые гости узнают по деталям. Начните с простого кадра, а самые неожиданные оставьте на финал.</p>
+      </div>
+      <div class="event-grid">
+        <article class="event"><h3>Свадьба</h3><p>Первая поездка пары, детские фотографии и кадры с общими друзьями.</p><p class="event__example">«Где молодожёны впервые отдыхали вместе?»</p></article>
+        <article class="event"><h3>Юбилей</h3><p>Семейный архив, любимые места и фотографии юбиляра разных лет.</p><p class="event__example">«Кто стоит рядом с юбиляром?»</p></article>
+        <article class="event"><h3>Корпоратив</h3><p>Первые офисы, выезды команды и события, которые все помнят по-своему.</p><p class="event__example">«На каком выезде был сделан этот снимок?»</p></article>
+        <article class="event"><h3>Выпускной</h3><p>Школьные поездки, капустники и узнаваемые детали из жизни класса.</p><p class="event__example">«В каком классе мы ездили сюда?»</p></article>
+      </div>
+    </section>
+
+    <section id="download" class="download" aria-labelledby="download-title">
+      <div class="wrap section">
+        <div class="section-head">
+          <div><p class="eyebrow">Демо-версия</p><h2 id="download-title">Возьмите на репетицию</h2></div>
+          <p>В демо можно подготовить свою игру и провести первые пять фотографий. На экране гостей будет подпись «Демо-версия».</p>
+        </div>
+        <div class="builds">
+          <article class="build"><h3>Windows</h3><p>Установщик для x64</p><div data-build="windows"><span>Ссылка готовится</span></div></article>
+          <article class="build"><h3>macOS</h3><p>Образы DMG для двух архитектур</p><div data-build="mac-arm"><span>Apple Silicon · ссылка готовится</span></div><div data-build="mac-intel"><span>Intel · ссылка готовится</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="guide" class="light" aria-labelledby="guide-title">
+      <div class="wrap section guide">
+        <div><p class="eyebrow">Подготовка ведущего</p><h2 id="guide-title">Перед первым раундом</h2>
+          <ul class="gear">
+            <li><strong>Ноутбук</strong><span>Для запуска игры и подготовки фотографий.</span></li>
+            <li><strong>Телефон</strong><span>Для браузерного пульта. Подключите его и ноутбук к одной сети.</span></li>
+            <li><strong>Телевизор или проектор</strong><span>Подключите как второй экран и выберите «Экран гостей».</span></li>
+          </ul>
+        </div>
+        <div class="faq">
+          <details open><summary>Как установить игру?</summary><p>В Windows запустите установщик. На macOS выберите DMG для своего процессора: Apple Silicon или Intel. Откройте образ и перенесите приложение в «Программы». После запуска попробуйте встроенную демо-игру.</p></details>
+          <details><summary>Как подключить пульт?</summary><p>Откройте игру на ноутбуке и отсканируйте QR-код камерой телефона. Оба устройства должны быть в одной локальной сети. Можно использовать точку доступа телефона.</p></details>
+          <details><summary>Как активировать лицензию?</summary><p>Получите ключ у продавца. В игре нажмите «Демо-версия — купить», введите ключ, проверьте его и подтвердите подключение компьютера. Если вам выдали файл лицензии, загрузите его в том же окне.</p></details>
+          <details><summary>Нужен ли интернет на мероприятии?</summary><p>Для онлайн-активации нужен интернет. После активации игра работает офлайн. Пульту всё равно нужно локальное соединение с ноутбуком.</p></details>
+          <details><summary>Как перенести игру на запасной ноутбук?</summary><p>На стартовом экране экспортируйте игру, перенесите архив и импортируйте его на другом ноутбуке. Лицензию для второго компьютера подключите отдельно, если у ключа есть свободное место.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <dialog class="photo-viewer" id="photo-viewer" aria-labelledby="photo-viewer-title">
+    <div class="photo-viewer__inner">
+      <div class="photo-viewer__bar">
+        <h2 id="photo-viewer-title" data-viewer-title>Скриншот игры</h2>
+        <button class="button button--outline" type="button" data-close-viewer autofocus>Закрыть</button>
+      </div>
+      <img alt="" data-viewer-image>
+      <div class="photo-viewer__controls">
+        <button class="button button--outline" type="button" data-step="-1">Предыдущий</button>
+        <button class="button button--outline" type="button" data-step="1">Следующий</button>
+      </div>
+    </div>
+  </dialog>
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true"></span>Стоп-кадр</a>
+      <span>Фотоигра для ведущих мероприятий</span>
+      <a href="./credits.html">Авторы фотографий</a>
+    </div>
+  </footer>
+</body>
+</html>
