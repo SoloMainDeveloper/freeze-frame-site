@@ -1,10 +1,18 @@
 "use strict";
 
-// После публикации сборки замените null на HTTPS-ссылку и подпись версии.
 const builds = {
-  windows: null,
-  "mac-arm": null,
-  "mac-intel": null,
+  windows: {
+    url: "https://github.com/SoloMainDeveloper/freeze-frame-site/releases/download/v1.0.0/StopKadr-Setup-1.0.0.exe",
+    label: "Скачать для Windows x64",
+  },
+  "mac-arm": {
+    url: "https://github.com/SoloMainDeveloper/freeze-frame-site/releases/download/v1.0.0/StopKadr-1.0.0-macos-arm64.dmg",
+    label: "Скачать для Apple Silicon",
+  },
+  "mac-intel": {
+    url: "https://github.com/SoloMainDeveloper/freeze-frame-site/releases/download/v1.0.0/StopKadr-1.0.0-macos-intel.dmg",
+    label: "Скачать для Intel",
+  },
 };
 
 for (const [id, build] of Object.entries(builds)) {
@@ -14,9 +22,7 @@ for (const [id, build] of Object.entries(builds)) {
   link.className = "button button--primary";
   link.href = build.url;
   link.textContent = build.label;
-  const version = document.createElement("small");
-  version.textContent = build.version;
-  slot.replaceChildren(link, version);
+  slot.replaceChildren(link);
 }
 
 const shots = [

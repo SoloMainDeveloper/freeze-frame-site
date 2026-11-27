@@ -92,7 +92,6 @@ html:has(.photo-viewer[open]) { overflow: hidden; }
 .build [data-build] { margin-top: .5rem; }
 .build [data-build] > span { font-size: .9rem; color: #dbe4d8; }
 .build [data-build] > a { display: inline-flex; }
-.build small { display: block; margin-block: .35rem; color: #dbe4d8; }
 .guide { display: grid; grid-template-columns: .9fr 1.1fr; align-items: start; gap: clamp(1.5rem, 5vw, 5rem); }
 .gear { padding: 0; margin: 1.4rem 0 0; list-style: none; }
 .gear li { display: grid; gap: .2rem; border-bottom: 1px solid #b9c0b1; padding: .62rem 0; }
